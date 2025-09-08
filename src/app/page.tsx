@@ -8,7 +8,7 @@ import { ArrowRight, MessageSquare, Code, Award, Mail, CircleEllipsis, PartyPopp
 import Image from 'next/image';
 import Script from 'next/script';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, Suspense } from 'react';
 
 /* ---------- quick-question data ---------- */
 const questions = {
@@ -22,7 +22,7 @@ const questions = {
 // legacy side prompt config removed; using centered icon buttons instead
 
 /* ---------- component ---------- */
-export default function Home() {
+function HomeInner() {
   const [input, setInput] = useState('');
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
@@ -229,3 +229,10 @@ export default function Home() {
   );
 }
 
+export default function Home() {
+  return (
+    <Suspense fallback={null}>
+      <HomeInner />
+    </Suspense>
+  );
+}
