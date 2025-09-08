@@ -1,0 +1,25 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'assets.aceternity.com',
+      },
+    ],
+  },
+  devIndicators: {
+    appIsrStatus: false,
+    buildActivity: false,
+  },
+  eslint: {
+    // Ne bloque PAS le build en cas d'erreurs eslint
+    ignoreDuringBuilds: true,
+  },
+};
+
+module.exports = nextConfig;
