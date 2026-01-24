@@ -1,5 +1,3 @@
-![image](assets/readme-photo.png)
- 
 # AI Portfolio — Arav Patel 🤖✨
 
 This interactive portfolio adapts to you. Ask questions — my AI avatar replies instantly.
