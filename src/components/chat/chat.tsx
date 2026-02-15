@@ -53,7 +53,7 @@ const Avatar = dynamic<AvatarProps>(
           >
             <Image
               src="/arav-images/no-background-ski-ghibli-smiling.png"
-              alt="John avatar"
+              alt="Arav avatar"
               width={320}
               height={320}
               priority
@@ -90,7 +90,7 @@ const Chat = () => {
   const hasLoadedHistoryRef = useRef(false);
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
   const autoScrollRef = useRef(true);
-
+  
   // Reset session chat on fresh navigation and on page hide (to avoid tab restore retaining state)
   useEffect(() => {
     try {
@@ -104,7 +104,7 @@ const Chat = () => {
     }
 
     const handlePageHide = () => {
-      try { sessionStorage.removeItem('chatHistorySession'); } catch { }
+      try { sessionStorage.removeItem('chatHistorySession'); } catch {}
     };
     window.addEventListener('pagehide', handlePageHide);
     return () => window.removeEventListener('pagehide', handlePageHide);
@@ -116,7 +116,7 @@ const Chat = () => {
     window.addEventListener('open-helper-drawer', handler as EventListener);
     return () => window.removeEventListener('open-helper-drawer', handler as EventListener);
   }, []);
-
+  
   // Ref to track if we've already submitted the initial query
   const hasSubmittedInitialQuery = useRef(false);
 
@@ -172,7 +172,7 @@ const Chat = () => {
     if (hasLoadedHistoryRef.current) return;
     try {
       // Cleanup legacy localStorage key from older versions
-      try { localStorage.removeItem('chatHistory'); } catch { }
+      try { localStorage.removeItem('chatHistory'); } catch {}
       const raw = sessionStorage.getItem('chatHistorySession');
       if (raw) {
         const persisted = JSON.parse(raw);
@@ -271,10 +271,10 @@ const Chat = () => {
     if (!query.trim() || isToolInProgress || isSubmitting || isLoading) {
       return;
     }
-
+    
     setIsSubmitting(true);
     setLoadingSubmit(true);
-
+    
     append({
       role: 'user',
       content: query,
@@ -299,7 +299,7 @@ const Chat = () => {
       hasSubmittedInitialQuery.current = true;
       setAutoSubmitted(true);
       setInput('');
-
+      
       // Direct call to append instead of using submitQuery to avoid dependency issues
       setIsSubmitting(true);
       setLoadingSubmit(true);
@@ -448,7 +448,7 @@ const Chat = () => {
                         isLoading={isLoading}
                         reload={reload}
                         addToolResult={addToolResult}
-                        streamLocked={isLoading && messages[messages.length - 1]?.id === m.id && messages[messages.length - 1]?.role === 'assistant'}
+                        streamLocked={isLoading && messages[messages.length-1]?.id === m.id && messages[messages.length-1]?.role === 'assistant'}
                       />
                     </div>
                   );
@@ -470,12 +470,12 @@ const Chat = () => {
         {/* Quick pill buttons (match home page) */}
         <div className="sticky bottom-[88px] z-40 px-2 md:px-0">
           <div className="mb-3 flex w-full max-w-4xl flex-wrap items-center justify-center gap-2 md:gap-3 mx-auto">
-            <button onClick={() => submitQuery('Who are you? I want to know more about you.')} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/80 px-4 py-2 text-sm font-medium text-black shadow-sm backdrop-blur-md hover:bg-white"><MessageSquare className="h-4 w-4" />About Me</button>
-            <button onClick={() => submitQuery('What are your projects? What are you working on right now?')} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/80 px-4 py-2 text-sm font-medium text-black shadow-sm backdrop-blur-md hover:bg-white"><Code className="h-4 w-4" />Projects</button>
-            <button onClick={() => submitQuery('What are your skills? Give me a list of your soft and hard skills.')} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/80 px-4 py-2 text-sm font-medium text-black shadow-sm backdrop-blur-md hover:bg-white"><Award className="h-4 w-4" />Skills</button>
-            <button onClick={() => submitQuery('What do you do for fun? What are your hobbies?')} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/80 px-4 py-2 text-sm font-medium text-black shadow-sm backdrop-blur-md hover:bg-white"><PartyPopper className="h-4 w-4" />Fun</button>
-            <button onClick={() => submitQuery('How can I reach you?')} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/80 px-4 py-2 text-sm font-medium text-black shadow-sm backdrop-blur-md hover:bg-white"><Mail className="h-4 w-4" />Contact</button>
-            <button onClick={() => setDrawerOpen(true)} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/80 px-4 py-2 text-sm font-medium text-black shadow-sm backdrop-blur-md hover:bg-white"><CircleEllipsis className="h-4 w-4" />More</button>
+            <button onClick={() => submitQuery('Who are you? I want to know more about you.')} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/80 px-4 py-2 text-sm font-medium text-black shadow-sm backdrop-blur-md hover:bg-white"><MessageSquare className="h-4 w-4"/>About Me</button>
+            <button onClick={() => submitQuery('What are your projects? What are you working on right now?')} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/80 px-4 py-2 text-sm font-medium text-black shadow-sm backdrop-blur-md hover:bg-white"><Code className="h-4 w-4"/>Projects</button>
+            <button onClick={() => submitQuery('What are your skills? Give me a list of your soft and hard skills.')} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/80 px-4 py-2 text-sm font-medium text-black shadow-sm backdrop-blur-md hover:bg-white"><Award className="h-4 w-4"/>Skills</button>
+            <button onClick={() => submitQuery('What do you do for fun? What are your hobbies?')} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/80 px-4 py-2 text-sm font-medium text-black shadow-sm backdrop-blur-md hover:bg-white"><PartyPopper className="h-4 w-4"/>Fun</button>
+            <button onClick={() => submitQuery('How can I reach you?')} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/80 px-4 py-2 text-sm font-medium text-black shadow-sm backdrop-blur-md hover:bg-white"><Mail className="h-4 w-4"/>Contact</button>
+            <button onClick={() => setDrawerOpen(true)} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/80 px-4 py-2 text-sm font-medium text-black shadow-sm backdrop-blur-md hover:bg-white"><CircleEllipsis className="h-4 w-4"/>More</button>
           </div>
         </div>
 

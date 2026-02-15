@@ -3,7 +3,7 @@ import { z } from 'zod';
 
 export const getJob = tool({
   description:
-    "Gives a summary of what kind of job John Patel is looking for, plus his contact info and how to reach him. Use this tool when the user asks about his job search or how to contact him for opportunities.",
+    "Gives a summary of what kind of job Arav Patel is looking for, plus his contact info and how to reach him. Use this tool when the user asks about his job search or how to contact him for opportunities.",
   parameters: z.object({}),
   execute: async () => {
     return `Here’s what I’m looking for 👇

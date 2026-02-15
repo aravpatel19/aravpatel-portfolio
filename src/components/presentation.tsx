@@ -7,12 +7,12 @@ import React from 'react';
 export function Presentation() {
   // Personal information
   const profile = {
-    name: 'John Patel',
+    name: 'Arav Patel',
     age: '22 years old',
     location: 'Princeton, New Jersey',
     // Add a newline character after the emoji
     description:
-      "Hey 👋\nI'm John — I build AI things, ship fast, and keep it simple. Think agentic RAG systems, clean cloud infra (AWS/Terraform/Kubernetes), and vibecoded frontends with Next.js + TypeScript. Off the laptop, I’m skiing black diamonds, playing soccer, or chasing a new idea. If it’s fun and useful, I’m in.",
+      "Hey 👋\nI'm Arav — I build AI things, ship fast, and keep it simple. Think agentic RAG systems, clean cloud infra (AWS/Terraform/Kubernetes), and vibecoded frontends with Next.js + TypeScript. Off the laptop, I’m skiing black diamonds, playing soccer, or chasing a new idea. If it’s fun and useful, I’m in.",
     src: '/arav-images/ski-arav.jpg',
     fallbackSrc:
       'https://images.unsplash.com/photo-1519681393-5cd7f39ab806?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3',

@@ -22,13 +22,13 @@ const OpportunityCard = () => {
           <div className="bg-muted h-16 w-16 overflow-hidden rounded-full shadow-md">
             <img
               src="/arav-images/Arav_Headshot.png"
-              alt="John's avatar"
+              alt="Arav's avatar"
               className="h-full w-full object-cover"
             />
           </div>
           <div>
             <h2 className="text-foreground text-2xl font-semibold">
-              John Patel
+              Arav Patel
             </h2>
             <p className="text-muted-foreground text-sm">
               Open to full-time roles (Winter 2025)

@@ -33,8 +33,8 @@ function HomeInner() {
   const bgSrc = bgParam === 'beach'
     ? '/arav-images/beach.jpg'
     : bgParam === 'beach2'
-      ? '/arav-images/beach-2.jpg'
-      : '/arav-images/morocco-background.jpg';
+    ? '/arav-images/beach-2.jpg'
+    : '/arav-images/morocco-background.jpg';
 
   const goToChat = useCallback((query: string) => {
     router.push(`/chat?query=${encodeURIComponent(query)}`);
@@ -82,7 +82,7 @@ function HomeInner() {
           className="hidden bg-gradient-to-b from-neutral-500/10 to-neutral-100/0 bg-clip-text text-[10rem] leading-none font-black text-transparent select-none sm:block lg:text-[16rem]"
           style={{ marginBottom: '-2.5rem' }}
         >
-          John Patel
+          Arav Patel
         </div>
       </div>
 
@@ -100,10 +100,10 @@ function HomeInner() {
         {/* Moved About button elsewhere */}
 
         <h2 className="text-secondary-foreground mt-1 text-xl font-semibold md:text-2xl">
-          Hey, I&apos;m John 👋
+          Hey, I&apos;m Arav 👋
         </h2>
         <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
-          John Patel&apos;s AI Persolio
+          Arav Patel&apos;s AI Persolio
         </h1>
       </motion.div>
 
@@ -123,9 +123,9 @@ function HomeInner() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-4 md:grid-cols-[1fr_auto_1fr]">
           {/* Left vertical prompts (use full prompt text) */}
           <div className="hidden flex-col items-end gap-3 md:flex">
-            <button onClick={() => goToChat(questions.Me)} className="inline-flex min-w-[260px] items-center gap-2 rounded-2xl border border-white/30 bg-white/80 px-5 py-3 text-[13px] font-medium text-black shadow-md backdrop-blur-md hover:bg-white"><MessageSquare className="h-4 w-4" /> <span className="text-left">{questions.Me}</span></button>
-            <button onClick={() => goToChat(questions.Projects)} className="inline-flex min-w-[260px] items-center gap-2 rounded-2xl border border-white/30 bg-white/80 px-5 py-3 text-[13px] font-medium text-black shadow-md backdrop-blur-md hover:bg-white"><Code className="h-4 w-4" /> <span className="text-left">{questions.Projects}</span></button>
-            <button onClick={() => goToChat(questions.Skills)} className="inline-flex min-w-[260px] items-center gap-2 rounded-2xl border border-white/30 bg-white/80 px-5 py-3 text-[13px] font-medium text-black shadow-md backdrop-blur-md hover:bg-white"><Award className="h-4 w-4" /> <span className="text-left">{questions.Skills}</span></button>
+            <button onClick={() => goToChat(questions.Me)} className="inline-flex min-w-[260px] items-center gap-2 rounded-2xl border border-white/30 bg-white/80 px-5 py-3 text-[13px] font-medium text-black shadow-md backdrop-blur-md hover:bg-white"><MessageSquare className="h-4 w-4"/> <span className="text-left">{questions.Me}</span></button>
+            <button onClick={() => goToChat(questions.Projects)} className="inline-flex min-w-[260px] items-center gap-2 rounded-2xl border border-white/30 bg-white/80 px-5 py-3 text-[13px] font-medium text-black shadow-md backdrop-blur-md hover:bg-white"><Code className="h-4 w-4"/> <span className="text-left">{questions.Projects}</span></button>
+            <button onClick={() => goToChat(questions.Skills)} className="inline-flex min-w-[260px] items-center gap-2 rounded-2xl border border-white/30 bg-white/80 px-5 py-3 text-[13px] font-medium text-black shadow-md backdrop-blur-md hover:bg-white"><Award className="h-4 w-4"/> <span className="text-left">{questions.Skills}</span></button>
           </div>
 
           {/* Hero image */}
@@ -133,7 +133,7 @@ function HomeInner() {
             <div className="relative h-72 w-auto sm:h-80 md:h-[24rem] lg:h-[28rem]">
               <Image
                 src="/arav-images/no-background-ski-ghibli.png"
-                alt="John hero"
+                alt="Arav hero"
                 width={640}
                 height={640}
                 priority
@@ -145,9 +145,9 @@ function HomeInner() {
 
           {/* Right vertical prompts (use full prompt text) */}
           <div className="hidden flex-col items-start gap-3 md:flex">
-            <button onClick={() => goToChat(questions.Fun)} className="inline-flex min-w-[260px] items-center gap-2 rounded-2xl border border-white/30 bg-white/80 px-5 py-3 text-[13px] font-medium text-black shadow-md backdrop-blur-md hover:bg-white"><PartyPopper className="h-4 w-4" /> <span className="text-left">{questions.Fun}</span></button>
-            <button onClick={() => goToChat(questions.Contact)} className="inline-flex min-w-[260px] items-center gap-2 rounded-2xl border border-white/30 bg-white/80 px-5 py-3 text-[13px] font-medium text-black shadow-md backdrop-blur-md hover:bg-white"><Mail className="h-4 w-4" /> <span className="text-left">{questions.Contact}</span></button>
-            <button onClick={() => router.push('/chat?menu=1')} className="inline-flex min-w-[240px] items-center gap-2 rounded-2xl border border-white/30 bg-white/80 px-5 py-3 text-[13px] font-medium text-black shadow-md backdrop-blur-md hover:bg-white"><CircleEllipsis className="h-4 w-4" /> <span className="text-left">More</span></button>
+            <button onClick={() => goToChat(questions.Fun)} className="inline-flex min-w-[260px] items-center gap-2 rounded-2xl border border-white/30 bg-white/80 px-5 py-3 text-[13px] font-medium text-black shadow-md backdrop-blur-md hover:bg-white"><PartyPopper className="h-4 w-4"/> <span className="text-left">{questions.Fun}</span></button>
+            <button onClick={() => goToChat(questions.Contact)} className="inline-flex min-w-[260px] items-center gap-2 rounded-2xl border border-white/30 bg-white/80 px-5 py-3 text-[13px] font-medium text-black shadow-md backdrop-blur-md hover:bg-white"><Mail className="h-4 w-4"/> <span className="text-left">{questions.Contact}</span></button>
+            <button onClick={() => router.push('/chat?menu=1')} className="inline-flex min-w-[240px] items-center gap-2 rounded-2xl border border-white/30 bg-white/80 px-5 py-3 text-[13px] font-medium text-black shadow-md backdrop-blur-md hover:bg-white"><CircleEllipsis className="h-4 w-4"/> <span className="text-left">More</span></button>
           </div>
         </div>
       </div>
@@ -201,7 +201,7 @@ function HomeInner() {
               aria-label="Submit question"
               className="flex items-center justify-center rounded-full bg-[#0171E3] p-2 text-white shadow disabled:opacity-50"
             >
-              <ArrowRight className="h-6 w-6" />
+              <ArrowRight  className="h-6 w-6" />
             </button>
           </div>
         </form>
@@ -220,7 +220,7 @@ function HomeInner() {
           end-call-text="End"
           expand-text="Open voice chat"
           listening-text="Listening..."
-          speaking-text="John speaking"
+          speaking-text="Arav speaking"
         />
       </div>
 

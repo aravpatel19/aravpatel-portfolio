@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { ChevronRight, Link } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
-// John Patel projects
+// Arav Patel projects
 const PROJECT_CONTENT = [
   {
     title: 'Multimodal Clinical RAG',
