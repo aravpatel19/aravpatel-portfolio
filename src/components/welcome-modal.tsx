@@ -69,11 +69,11 @@ export default function WelcomeModal({ trigger }: WelcomeModalProps) {
             {/* Header */}
             <DialogHeader className="relative flex flex-row items-start justify-between px-8 pt-8 pb-4">
               <div className="flex items-center gap-3">
-                <Image src="/arav-images/Arav-Logo-purple.png" alt="Arav logo" width={40} height={40} className="rounded-lg" />
+                <Image src="/arav-images/Arav-Logo-purple.png" alt="John logo" width={40} height={40} className="rounded-lg" />
                 <div>
                   <DialogTitle className="text-3xl font-bold tracking-tight text-neutral-900">About this site</DialogTitle>
                   <DialogDescription className="mt-1 text-sm text-neutral-700">
-                    A conversational portfolio by Arav Patel — built with Next.js, Vercel AI SDK, and OpenAI.
+                    A conversational portfolio by John Patel — built with Next.js, Vercel AI SDK, and OpenAI.
                   </DialogDescription>
                 </div>
               </div>
@@ -110,8 +110,8 @@ export default function WelcomeModal({ trigger }: WelcomeModalProps) {
                   <div className="space-y-4">
                     <h3 className="text-xl font-semibold text-neutral-900">Try these</h3>
                     <div className="flex flex-wrap gap-2">
-                      <Button variant="secondary" className="rounded-full" onClick={() => handleQuickAsk('Who is Arav Patel?')}>
-                        Who is Arav?
+                      <Button variant="secondary" className="rounded-full" onClick={() => handleQuickAsk('Who is John Patel?')}>
+                        Who is John?
                       </Button>
                       <Button variant="secondary" className="rounded-full" onClick={() => handleQuickAsk('Show me your projects')}>
                         Show projects

@@ -14,10 +14,10 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Arav Patel — AI/ML Engineer & Full‑Stack Developer",
-  description: "Interactive portfolio with an AI-powered chat that answers questions about Arav Patel, his skills, projects, and experience.",
+  title: "John Patel — AI/ML Engineer & Full‑Stack Developer",
+  description: "Interactive portfolio with an AI-powered chat that answers questions about John Patel, his skills, projects, and experience.",
   keywords: [
-    "Arav Patel",
+    "John Patel",
     "Portfolio",
     "AI",
     "Machine Learning",
@@ -31,23 +31,23 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Arav Patel",
+      name: "John Patel",
       url: "https://aravpatel.com",
     },
   ],
-  creator: "Arav Patel",
+  creator: "John Patel",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://aravpatel.com",
-    title: "Arav Patel — AI/ML Engineer & Full‑Stack Developer",
-    description: "Interactive portfolio with an AI-powered chat that answers questions about Arav Patel.",
-    siteName: "Arav Patel Portfolio",
+    title: "John Patel — AI/ML Engineer & Full‑Stack Developer",
+    description: "Interactive portfolio with an AI-powered chat that answers questions about John Patel.",
+    siteName: "John Patel Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arav Patel — AI/ML Engineer & Full‑Stack Developer",
-    description: "Interactive portfolio with an AI-powered chat that answers questions about Arav Patel.",
+    title: "John Patel — AI/ML Engineer & Full‑Stack Developer",
+    description: "Interactive portfolio with an AI-powered chat that answers questions about John Patel.",
     creator: "@aravpatel_",
   },
   icons: {
